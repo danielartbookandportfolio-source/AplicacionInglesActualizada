@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 200vh;
+    background: #111;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background: #2d2d2d;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    z-index: 1000;
+}
+
+/* ================= GROUPS ================= */
+
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ================= BUTTONS ================= */
+
+.topbar a {
+    min-width: 130px;
+    height: 40px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ddd;
+    color: black;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.topbar a:hover {
+    transform: scale(1.05);
+    background: #f0f0f0;
+}
+
+.topbar a.selected {
+    background: white;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.4);
+}
+
+/* ================= PARALLAX ================= */
+
+.parallax {
+    height: 150vh;
+
+    background-image:
+        url("https://picsum.photos/1600/2000");
+
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    position: relative;
+
+    padding-top: 70px;
+
+    overflow: hidden;
+}
+
+/* ================= OVERLAY ================= */
+
+.parallax::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    z-index: 1;
+}
+
+/* ================= TITULO ================= */
+
+.title {
+    position: absolute;
+
+    top: 28%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    text-align: center;
+
+    font-size: 70px;
+    color: white;
+
+    text-shadow:
+        2px 2px 10px black;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+/* ================= MAIN IMAGE ================= */
+
+.main-image {
+    position: absolute;
+
+    top: 55%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 700px;
+    max-width: 90%;
+
+    z-index: 2;
+}
+
+.main-image img {
+    width: 100%;
+
+    border-radius: 20px;
+
+    display: block;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.5);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(30,30,30,0.85);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+}
+
+/* ================= DOTS ================= */
+
+.nav-item {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.3);
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.3);
+
+    background:
+        rgba(255,255,255,0.6);
+}
+
+.nav-item.active {
+    background: white;
+
+    transform: scale(1.4);
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5);
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.game-container {
+    width: 500px;
+    text-align: center;
+}
+
+/* TOP */
+.top-ui {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* WORD */
+.word-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.main-word {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* ANSWERS */
+.answers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.answer-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #334155;
+    color: white;
+    transition: 0.2s;
+}
+
+.answer-btn:hover {
+    background: #475569;
+}
+
+/* FEEDBACK */
+.correct {
+    background: #22c55e !important;
+}
+
+.wrong {
+    background: #ef4444 !important;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.03);
+}

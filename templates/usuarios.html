@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usuarios</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            margin: 0 auto; /* centra la tabla */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lista de usuarios</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Contraseña</th>
+    </tr>
+
+    {% for u in usuarios %}
+    <tr>
+        <td>{{ u[0] }}</td>
+        <td>{{ u[1] }}</td>
+        <td>{{ u[2] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

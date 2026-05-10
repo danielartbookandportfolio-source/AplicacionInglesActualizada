@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dual Words</title>
+
+    <!-- CSS FLASK -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/dualwords.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- ================= HUD SUPERIOR ================= -->
+<div class="hud">
+
+    <div class="hud-item">
+        Score: <span id="score">0</span>
+    </div>
+
+    <div class="hud-item">
+        Time: <span id="timer">30</span>
+    </div>
+
+    <div class="hud-item">
+        Streak: <span id="streak">0</span>
+    </div>
+
+    <div class="hud-item">
+        Level: <span id="level">1</span>
+    </div>
+
+</div>
+
+<!-- ================= GAME ================= -->
+<div class="page-wrapper">
+
+    <div class="game-container">
+
+        <!-- TITLE -->
+        <h1 class="game-title">
+            Dual Words
+        </h1>
+
+        <!-- INFO -->
+        <div class="word-card">
+
+            <div class="language-tag">
+                Match English ↔ Español
+            </div>
+
+            <div class="main-word">
+                Encuentra las parejas correctas
+            </div>
+
+        </div>
+
+        <!-- MATCH AREA -->
+        <div class="answers-container">
+
+            <div class="answers-column" id="leftAnswers"></div>
+            <div class="answers-column" id="rightAnswers"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= GAME OVER SCREEN ================= -->
+<div id="gameOverScreen" style="display:none;">
+
+    <div class="gameover-box">
+
+        <h1>¡Tiempo terminado!</h1>
+
+        <p>Score final: <span id="finalScore">0</span></p>
+
+        <!-- ================= BOTONES ================= -->
+        <div class="gameover-buttons">
+
+            <button id="restartBtn">Reiniciar</button>
+
+            <button id="menuBtn">Menú</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="{{ url_for('static', filename='js/dualwords.js') }}"></script>
+
+</body>
+
+</html>

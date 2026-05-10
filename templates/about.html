@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+    body {
+        margin: 0;
+        background: #111827;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        color: #9ca3af;
+    }
+
+    /* Navegacion */
+    .nav {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 10px 20px;
+        background: #1f2937;
+        border-radius: 12px;
+        transition: 0.2s;
+    }
+
+    .nav a:hover {
+        background: #4f46e5;
+    }
+
+    /* Contenedor noticias */
+    .news-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding-bottom: 60px;
+    }
+
+    /* Card noticia */
+    .news-card {
+        background: #1f2937;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid #374151;
+        transition: 0.2s;
+    }
+
+    .news-card:hover {
+        transform: scale(1.03);
+        border-color: #4f46e5;
+    }
+
+    /* Imagen fake */
+    .news-image {
+        height: 180px;
+        background: linear-gradient(
+            135deg,
+            #4f46e5,
+            #1e40af
+        );
+    }
+
+    /* Texto */
+    .news-content {
+        padding: 20px;
+    }
+
+    .news-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .news-text {
+        color: #9ca3af;
+        line-height: 1.5;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <h1>
+            Sobre Nosotros
+        </h1>
+
+        <p>
+            Noticias y actualizaciones del estudio
+        </p>
+
+    </div>
+
+    <!-- NAV -->
+    <div class="nav">
+
+        <a href="/">
+            Inicio
+        </a>
+
+        <a href="/register">
+            Register
+        </a>
+
+    </div>
+
+    <!-- NOTICIAS -->
+    <div class="news-container">
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    Nuevo RTS en desarrollo
+                </div>
+
+                <div class="news-text">
+                    Estamos trabajando en un RTS
+                    procedural con mapas hexagonales
+                    y construccion avanzada.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    Goose Factory avanza
+                </div>
+
+                <div class="news-text">
+                    El survival de la fabrica
+                    de cereal ya tiene sistema
+                    de persecucion y clima.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    Nuevo motor procedural
+                </div>
+
+                <div class="news-text">
+                    Se creo un nuevo sistema
+                    procedural para recursos,
+                    clusters y terrenos.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    Sistema online
+                </div>
+
+                <div class="news-text">
+                    Se estan haciendo pruebas
+                    para agregar multiplayer
+                    y matchmaking.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    Nuevos artistas
+                </div>
+
+                <div class="news-text">
+                    El estudio planea integrar
+                    nuevos modelos y animaciones
+                    3D estilizadas.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="news-card">
+
+            <div class="news-image"></div>
+
+            <div class="news-content">
+
+                <div class="news-title">
+                    IA para enemigos
+                </div>
+
+                <div class="news-text">
+                    Los enemigos ahora pueden
+                    rastrear sonidos, luces
+                    y movimiento del jugador.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Parallax titulo fijo</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/styles.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- TOPBAR -->
+    <!-- ========================= -->
+    <div class="topbar">
+
+        <!-- LEFT -->
+        <div class="topbar-left">
+
+            <!-- ABOUT -->
+            <a
+                href="/about"
+                data-action="about"
+            >
+                About
+            </a>
+
+            <!-- USUARIOS -->
+            <a
+                href="/usuarios"
+                data-action="usuarios"
+            >
+                Usuarios
+            </a>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="topbar-right">
+
+            <!-- LOGIN -->
+            <a
+                href="/login"
+                data-action="login"
+            >
+                Login
+            </a>
+
+            <!-- REGISTER -->
+            <a
+                href="/register"
+                data-action="register"
+            >
+                Register
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- PARALLAX -->
+    <!-- ========================= -->
+    <section class="parallax">
+
+        <!-- TITULO -->
+        <h1 class="title">
+            Mi Mundo RTS
+        </h1>
+
+        <!-- IMAGEN PRINCIPAL -->
+        <div class="main-image">
+
+            <img
+                id="displayImage"
+                src="{{ url_for('static', filename='img/img1.jpg') }}"
+                alt="preview"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- DOTS -->
+    <!-- ========================= -->
+    <div class="bottom-nav">
+
+        <div class="nav-item active"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+
+    </div>
+
+    <!-- JS -->
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+
+</html>

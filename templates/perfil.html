@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Perfil</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* Layout principal */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ========================= */
+        /* PANEL IZQUIERDO */
+        /* ========================= */
+        .left-panel {
+            width: 380px;
+            background: #1f2937;
+            padding: 30px;
+            box-sizing: border-box;
+            border-right: 2px solid #374151;
+            text-align: center;
+        }
+
+        /* Avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #374151;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+            border: 4px solid #4f46e5;
+        }
+
+        /* Nombre */
+        .username {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        /* Nick */
+        .nickname {
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+
+        /* Nivel */
+        .level {
+            display: inline-block;
+            background: #4f46e5;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Stats */
+        .stats {
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .stat {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .bar {
+            width: 100%;
+            height: 18px;
+            background: #374151;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: #22c55e;
+            border-radius: 20px;
+        }
+
+        /* Info */
+        .info {
+            margin-top: 25px;
+            background: #111827;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        /* Caja racha */
+        .streak-box {
+            margin-top: 20px;
+            background: #1f2937;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #374151;
+        }
+
+        .streak-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .streak-days {
+            font-size: 34px;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .streak-text {
+            color: #9ca3af;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        /* ========================= */
+        /* PANEL DERECHO */
+        /* ========================= */
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Titulo */
+        .games-title {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* Card */
+        .game-card {
+            height: 220px;
+            background: #1f2937;
+            border-radius: 25px;
+            border: 2px solid #374151;
+            overflow: hidden;
+            transition: 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover */
+        .game-card:hover {
+            transform: scale(1.03);
+            border-color: #4f46e5;
+        }
+
+        /* Imagen fake */
+        .game-image {
+            flex: 1;
+            background: linear-gradient(
+                135deg,
+                #4f46e5,
+                #1e40af
+            );
+        }
+
+        /* Texto juego */
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .game-desc {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="left-panel">
+
+        <!-- Avatar -->
+        <div class="avatar">
+            {{ nombre[0] }}
+        </div>
+
+        <!-- Nombre -->
+        <div class="username">
+            {{ nombre }}
+        </div>
+
+        <!-- Nick -->
+        <div class="nickname">
+            @{{ nombre }}
+        </div>
+
+        <!-- Nivel -->
+        <div class="level">
+            Nivel 27
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+
+            <div class="stat">
+
+                <div class="label">
+                    Experiencia
+                </div>
+
+                <div class="bar">
+                    <div
+                        class="fill"
+                        style="width:78%;"
+                    ></div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+
+                <div class="label">
+                    Poder
+                </div>
+
+                <div class="bar">
+                    <div
+                        class="fill"
+                        style="width:65%;"
+                    ></div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+
+                <div class="label">
+                    Velocidad
+                </div>
+
+                <div class="bar">
+                    <div
+                        class="fill"
+                        style="width:90%;"
+                    ></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+
+            <h3>Informacion</h3>
+
+            <p>
+                Jugador veterano.
+            </p>
+
+            <p>
+                Experiencia total: 12,450 XP
+            </p>
+
+            <!-- RACHA -->
+            <div class="streak-box">
+
+                <div class="streak-title">
+                    Dias de racha
+                </div>
+
+                <div class="streak-days">
+                    18 dias
+                </div>
+
+                <div class="streak-text">
+                    Entrando todos los dias.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="right-panel">
+
+        <div class="games-title">
+            Juegos
+        </div>
+
+        <!-- GRID -->
+        <div class="games-grid">
+
+            <!-- Juego -->
+            <div class="game-card">
+
+                <div class="game-image"></div>
+
+                <div class="game-info">
+
+                    <div class="game-name">
+                        Goose Factory
+                    </div>
+
+                    <div class="game-desc">
+                        Survival en fabrica de cereal.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Juego -->
+            <div class="game-card">
+
+                <div class="game-image"></div>
+
+                <div class="game-info">
+
+                    <div class="game-name">
+                        Cat Colony
+                    </div>
+
+                    <div class="game-desc">
+                        Gestion espacial con gatos.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Juego -->
+            <div class="game-card">
+
+                <div class="game-image"></div>
+
+                <div class="game-info">
+
+                    <div class="game-name">
+                        Hex RTS
+                    </div>
+
+                    <div class="game-desc">
+                        Estrategia procedural hexagonal.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Juego -->
+            <div class="game-card">
+
+                <div class="game-image"></div>
+
+                <div class="game-info">
+
+                    <div class="game-name">
+                        Chicken Jump
+                    </div>
+
+                    <div class="game-desc">
+                        Plataforma hiper casual.
+                    </div>
+
+                </div>
+
+            </div>
+
+          <a
+    href="/dualwords"
+    class="game-card"
+>
+
+    <div class="game-image"></div>
+
+    <div class="game-info">
+
+        <div class="game-name">
+            Doulongo Arena
+        </div>
+
+        <div class="game-desc">
+            Combates online por niveles.
+        </div>
+
+    </div>
+
+</a>
+
+<a
+    href="/dualwords"
+    class="game-card"
+    style="text-decoration: none; color: inherit;"
+>
+
+    <div
+        class="game-image"
+        style="
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #1e3a8a
+            );
+        "
+    ></div>
+
+    <div class="game-info">
+
+        <div class="game-name">
+            Dual Words
+        </div>
+
+        <div class="game-desc">
+            Traduce palabras entre ingles y espanol.
+        </div>
+
+    </div>
+
+</a>
+    <div class="game-info">
+
+        <div class="game-name">
+            Dual Words
+        </div>
+
+        <div class="game-desc">
+            Traduce palabras entre ingles y espanol.
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
